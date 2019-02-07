@@ -1,5 +1,6 @@
 package com.pentalog;
 
+import com.pentalog.service.FlightServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,9 +12,16 @@ public class MainApp {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("airport-application-context.xml");
 
-		AirportManager airportManager = (AirportManager) context.getBean(AirportManager.class);
-		AirportManager airportManager2 = (AirportManager) context.getBean(AirportManager.class);
+		FlightServiceImpl airportManager = (FlightServiceImpl) context.getBean(FlightServiceImpl.class);
 
-		airportManager.handle();
+		//airportManager.createFlight("ZSC_1234");
+		//airportManager.createFlight("FS-231");
+		//airportManager.createFlight("FASDA-5");
+
+		//airportManager.createUser("aboieriu@pentalog.fr", "alex", "boieriu");
+
+		//airportManager.assignUserToFlight("aboieriu@pentalog.fr", "PTG-5");
+
+
 	}
 }
